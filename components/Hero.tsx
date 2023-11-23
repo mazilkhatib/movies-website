@@ -1,13 +1,13 @@
-import React from 'react';
+import React,{FC} from 'react';
 interface HeroProps {
     title: string;
     subtitle: string;
     image: string;
 }
 
-const Hero: React.FC<HeroProps> = ({ title, subtitle, image }) => (
+const Hero: FC<HeroProps> = ({ title, subtitle, image }) => (
     <div className="lg:flex">
-        <div className="flex items-center justify-center w-full px-6 py-8 lg:h-[32rem] lg:w-1/2">
+        <div className="flex items-center justify-center w-full px-6 py-8 lg:h-[32rem] lg:w-1/2 lg:ml-16 lg:pl-16">
             <div className="max-w-xl">
                 <h2 className="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">{title}</h2>
 
