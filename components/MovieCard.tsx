@@ -27,10 +27,10 @@ const MovieCard: FC<{movie: Movie}> = ({ movie }) => {
             className="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800"
         >
             <div className="px-4 py-2">
-                <h1 className="text-xl font-bold text-gray-800 uppercase dark:text-white">
+                <h1 className="text-xl font-bold text-gray-800 uppercase dark:text-white truncate">
                     {movie.title}
                 </h1>
-                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400 h-44 overflow-ellipsis overflow-hidden">
+                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400  h-36 overflow-hidden">
                     {movie.extract}
                 </p>
 
