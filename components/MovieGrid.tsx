@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import MovieCard from "@/components/MovieCard";
 
 interface MovieGridProps {
-    movies: [];
+    movies: any[];
 }
 
 const MovieGrid: React.FC<MovieGridProps> = ({ movies }) => {

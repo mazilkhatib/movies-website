@@ -1,24 +1,17 @@
 import React, {FC} from 'react';
 import Image from 'next/image';
-
 interface Movie {
     title: string;
     year: number;
     cast: string[];
     genres: string[];
-    href: string;
-    extract: string;
-    thumbnail: string;
-    thumbnail_width: number;
-    thumbnail_height: number;
-    trailer:string;
+    href: string | null; // allow null values
+    extract: string | undefined; // allow undefined values
+    thumbnail: string | undefined;
+    thumbnail_width: number | undefined;
+    thumbnail_height: number | undefined;
     trailerUrl: string;
 }
-interface MovieGridProps {
-    movies: Movie[];
-}
-
-// Create a new component for MovieCard
 const MovieCard: FC<{movie: Movie}> = ({ movie }) => {
     return (
         movie.thumbnail &&

@@ -1,8 +1,8 @@
 import Navbar from "@/components/NavBar";
 import Hero from "@/components/Hero";
-import MovieGrid from "@/components/MovieGrid"; // Import the MovieGrid component
+import MovieGrid from "@/components/MovieGrid";
 import moviesData from "@/public/movies.json";
-import Footer from "@/components/Footer"; // Import the movies data
+import Footer from "@/components/Footer";
 
 export default function Home() {
     return (
