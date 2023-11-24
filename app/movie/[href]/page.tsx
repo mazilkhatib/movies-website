@@ -1,6 +1,6 @@
 "use client"
-import React, {FC} from 'react';
-import {useParams} from 'next/navigation'
+import React, { FC } from 'react';
+import { useParams } from 'next/navigation'
 
 interface MovieProps {
     title: string;
@@ -9,9 +9,9 @@ interface MovieProps {
     genres: string[];
     href: string;
     extract: string;
-    thumbnail: string;
-    thumbnail_width: number;
-    thumbnail_height: number;
+    thumbnail: string | undefined;
+    thumbnail_width: number | undefined;
+    thumbnail_height: number | undefined;
     trailerUrl: string;
 }
 
@@ -25,7 +25,8 @@ const Page: FC<MoviePageParams> = () => {
     const fetchMovie = async (href: string | string[]) => {
         const response = await fetch('/movies.json');
         const data = await response.json();
-        return data.find((movie: MovieProps) => movie.href === href);
+        const movie = data.find((movie: MovieProps) => movie.href === href);
+        return movie;
     };
 
     const [movie, setMovie] = React.useState<MovieProps | null>(null);
