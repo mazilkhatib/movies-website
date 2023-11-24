@@ -5,8 +5,8 @@ interface Movie {
     year: number;
     cast: string[];
     genres: string[];
-    href: string | null; // allow null values
-    extract: string | undefined; // allow undefined values
+    href: string | null;
+    extract: string | undefined;
     thumbnail: string | undefined;
     thumbnail_width: number | undefined;
     thumbnail_height: number | undefined;
