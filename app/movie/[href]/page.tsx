@@ -1,6 +1,6 @@
 "use client"
-import React, { FC } from 'react';
-import { useParams } from 'next/navigation'
+import React, {FC} from 'react';
+import {useParams} from 'next/navigation'
 
 interface MovieProps {
     title: string;
@@ -19,22 +19,27 @@ interface MoviePageParams {
     href: string;
 }
 
-// Define the movie page component
 const Page: FC<MoviePageParams> = () => {
     const params = useParams();
     const href = params.href;
     const fetchMovie = async (href: string | string[]) => {
         const response = await fetch('/movies.json');
         const data = await response.json();
-        const movie = data.find((movie: MovieProps) => movie.href === href);
-        return movie;
+        return data.find((movie: MovieProps) => movie.href === href);
     };
 
     const [movie, setMovie] = React.useState<MovieProps | null>(null);
 
+
     React.useEffect(() => {
         fetchMovie(href).then((movie) => setMovie(movie));
     }, [href]);
+
+    const videoId = movie?.trailerUrl.split('=')[1].split('&')[0];
+
+    const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+
+    console.log(embedUrl)
 
     return (
         <div className="container mx-auto px-4 py-8">
@@ -86,7 +91,7 @@ const Page: FC<MoviePageParams> = () => {
                             <iframe
                                 width="560"
                                 height="315"
-                                src={movie.trailerUrl}
+                                src={movie.trailerUrl && embedUrl}
                                 title={movie.title}
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen

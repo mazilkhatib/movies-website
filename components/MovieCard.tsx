@@ -41,7 +41,6 @@ const MovieCard: FC<{movie: Movie}> = ({ movie }) => {
                 <h1 className="text-lg font-bold text-white">{movie.year}</h1>
                 <a
                     href={`/movie/${movie.href}`}
-                    target="_blank"
                     rel="noreferrer"
                     className="px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-300 transform bg-white rounded hover:bg-gray-200 focus:bg-gray-400 focus:outline-none"
                 >
