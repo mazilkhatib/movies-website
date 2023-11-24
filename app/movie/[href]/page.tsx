@@ -1,6 +1,6 @@
 "use client"
-import React, { FC } from 'react';
-import { useParams } from 'next/navigation'
+import React, {FC} from 'react';
+import {useParams} from 'next/navigation'
 
 interface MovieProps {
     title: string;
@@ -15,18 +15,20 @@ interface MovieProps {
     trailerUrl: string;
 }
 
-interface MoviePageParams {
-    href: string;
+interface PageProps {
+    params?: {
+        href: string
+    }
 }
 
-const Page: FC<MoviePageParams> = () => {
+
+const Page: FC<PageProps> = () => {
     const params = useParams();
     const href = params.href;
     const fetchMovie = async (href: string | string[]) => {
         const response = await fetch('/movies.json');
         const data = await response.json();
-        const movie = data.find((movie: MovieProps) => movie.href === href);
-        return movie;
+        return data.find((movie: MovieProps) => movie.href === href);
     };
 
     const [movie, setMovie] = React.useState<MovieProps | null>(null);
@@ -40,7 +42,6 @@ const Page: FC<MoviePageParams> = () => {
 
     const embedUrl = `https://www.youtube.com/embed/${videoId}`;
 
-    console.log(embedUrl)
 
     return (
         <div className="container mx-auto px-4 py-8">
@@ -50,7 +51,7 @@ const Page: FC<MoviePageParams> = () => {
                         <img
                             src={movie.thumbnail}
                             alt={movie.title}
-                            className="w-full h-auto rounded-lg shadow-lg"
+                            className="w-full h-full lg:h-1/2 lg:w-1/2 rounded-lg shadow-lg"
                         />
                     </div>
                     <div className="lg:w-1/2 lg:pl-8">
