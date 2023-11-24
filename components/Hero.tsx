@@ -2,8 +2,8 @@ import React, { FC } from 'react';
 
 interface HeroProps {
     title: string;
-    subtitle: string;
-    image: string;
+    subtitle: string | undefined;
+    image: string | undefined;
 }
 
 const Hero: FC<HeroProps> = ({ title, subtitle, image }) => (
