@@ -34,7 +34,7 @@ const MovieCard: FC<{movie: Movie}> = ({ movie }) => {
                 alt={movie.title}
                 width={movie.thumbnail_width}
                 height={movie.thumbnail_height}
-                className="object-cover w-full h-48 mt-2"
+                className="object-cover w-full h-48 mt-2 "
             />
 
             <div className="flex items-center justify-between px-4 py-2 bg-gray-900">
