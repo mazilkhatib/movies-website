@@ -1,4 +1,3 @@
-// Second file
 import React, { FC } from 'react';
 
 interface HeroProps {
@@ -46,27 +45,23 @@ const Hero: FC<HeroProps> = ({ moviesData }) => {
 };
 
 export async function getStaticProps() {
-    const res = await fetch('https://.../movies.json')
+    const res = await fetch('/movies.json')
     const moviesData = await res.json()
     return {
         props: {
             moviesData,
         },
-        // Next.js will attempt to re-generate the page:
-        // - When a request comes in
-        // - At most once every 10 seconds
-        revalidate: 10, // In seconds
+        revalidate: 10,
     }
 }
 
+interface Movie {
+    href: string;
+}
 export async function getStaticPaths() {
     const res = await fetch('/movies.json')
     const moviesData = await res.json()
-    // Get the paths we want to pre-render based on movies
-    const paths = moviesData.map( (movie) => ( { params: { href: movie.href }, }))
-    // We'll pre-render only these paths at build time.
-    // { fallback: 'blocking' } will server-render pages
-    // on-demand if the path doesn't exist.
+    const paths = moviesData.map( (movie: Movie) => ( { params: { href: movie.href }, }))
     return {
         paths,
         fallback: 'blocking'
