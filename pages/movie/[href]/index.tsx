@@ -96,7 +96,7 @@ interface Params {
 }
 
 export async function getStaticPaths() {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/movies.json`);
+    const response = await fetch(`https://www.jsonkeeper.com/b/1SEG`);
     const data: Movie[] = await response.json();
 
     const paths = data.map(movie => {
@@ -112,7 +112,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }: {params: Params}) {
     const { href } = params;
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/movies.json`);
+    const response = await fetch(`https://www.jsonkeeper.com/b/1SEG`);
     const data: Movie[] = await response.json();
 
     const movie = data.find(movie => movie.href === href);
