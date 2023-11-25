@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import "../../../app/globals.css"
+import "@/app/globals.css"
 
 interface MovieProps {
     title: string;
@@ -86,21 +86,41 @@ const Index: FC<PageProps> = ({movie}) => {
 
 export default Index;
 
-export async function getServerSideProps(context: any) {
-    const {href} = context.params; // use params.href instead of query.href
-    const fetchMovie = async (href: string) => {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/movies.json`);
-        const data = await response.json();
-        return data.find((movie: MovieProps) => movie.href === href);
-    };
+interface Movie {
+    href?: string;
+    // other movie properties
+}
 
-    const movie = await fetchMovie(href);
+interface Params {
+    href: string;
+}
+
+export async function getStaticPaths() {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/movies.json`);
+    const data: Movie[] = await response.json();
+
+    const paths = data.map(movie => {
+        const href = movie.href ? movie.href.toString() : '';
+        return {
+            params: { href }
+        }
+    });
+
+    return { paths, fallback: 'blocking' };
+}
+
+export async function getStaticProps({ params }: {params: Params}) {
+    const { href } = params;
+
+    const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/movies.json`);
+    const data: Movie[] = await response.json();
+
+    const movie = data.find(movie => movie.href === href);
 
     return {
         props: {
             movie
-        }
-    }
+        },
+        revalidate: 60
+    };
 }
-
-

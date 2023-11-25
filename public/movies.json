@@ -171,7 +171,7 @@
     "genres": [
       "Horror"
     ],
-    "href": "There%27s_Something_Wrong_with_the_Children",
+    "href": "There_27s_Something_Wrong_with_the_Children",
     "extract": "There's Something Wrong with the Children is a 2023 American horror film directed by Roxanne Benjamin and written by T. J. Cimfel and David White. The film stars Alisha Wainwright, Zach Gilford, Amanda Crew, and Carlos Santos. Jason Blum serves as an executive producer through his Blumhouse Television banner.",
     "thumbnail": "https://upload.wikimedia.org/wikipedia/en/5/5f/There%27s_Something_Wrong_with_the_Children_poster.png",
     "thumbnail_width": 250,
@@ -506,7 +506,7 @@
       "Historical",
       "War"
     ],
-    "href": "Freedom%27s_Path",
+    "href": "Freedom_27s_Path",
     "extract": "Freedom's Path is a 2022 historical war drama film written, directed and produced by Brett Smith in his feature length debut. It stars Gerran Howell, RJ Cyler, and Ewen Bremner. Based on the American Civil War, it won multiple film festival awards in 2022 and had a limited theatrical run from February 3, 2023.",
     "thumbnail": "https://upload.wikimedia.org/wikipedia/en/8/8b/FreedomsPathPoster.png",
     "thumbnail_width": 250,
@@ -524,7 +524,7 @@
       "Comedy",
       "Drama"
     ],
-    "href": "Magic_Mike%27s_Last_Dance",
+    "href": "Magic_Mike_27s_Last_Dance",
     "extract": "Magic Mike's Last Dance is a 2023 American comedy-drama film directed by Steven Soderbergh, written by Reid Carolin, and produced by Channing Tatum. It is the third installment in the Magic Mike trilogy, following Magic Mike (2012) and Magic Mike XXL (2015). The film stars Channing Tatum as the titular retired male stripper, who leaves Florida for London to help a socialite produce a stage play.",
     "thumbnail": "https://upload.wikimedia.org/wikipedia/en/5/5d/Magic_Mike_Last_Dance_Poster.png",
     "thumbnail_width": 258,
@@ -3676,7 +3676,8 @@
     "extract": "The Marvels is an upcoming American superhero film based on Marvel Comics featuring the characters Carol Danvers / Captain Marvel, Kamala Khan / Ms. Marvel, and Monica Rambeau. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is intended to be the sequel to the film Captain Marvel (2019), a continuation of the television series Ms. Marvel (2022), and the 33rd film in the Marvel Cinematic Universe (MCU). The film is directed by Nia DaCosta from a screenplay she co-wrote with Megan McDonnell, Elissa Karasik, and Zeb Wells. It stars Brie Larson as Carol Danvers, Iman Vellani as Kamala Khan, and Teyonah Parris as Monica Rambeau, alongside Samuel L. Jackson. In the film, Danvers, Khan, and Rambeau begin swapping places with each other every time they use their powers and must team-up.",
     "thumbnail": "https://upload.wikimedia.org/wikipedia/en/7/7a/The_Marvels_poster.jpg",
     "thumbnail_width": 259,
-    "thumbnail_height": 384
+    "thumbnail_height": 384,
+    "trailerUrl": "https://www.youtube.com/watch?v=wS_qbDztgVY"
   },
   {
     "title": "Chicken Run: Dawn of the Nugget",
