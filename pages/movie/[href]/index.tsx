@@ -89,7 +89,7 @@ export default Index;
 export async function getServerSideProps(context: any) {
     const {href} = context.params; // use params.href instead of query.href
     const fetchMovie = async (href: string) => {
-        const response = await fetch('http://localhost:3000/movies.json');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/movies.json`);
         const data = await response.json();
         return data.find((movie: MovieProps) => movie.href === href);
     };
