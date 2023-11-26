@@ -43,10 +43,10 @@ const Hero: FC<HeroProps> = ({ moviesData }) => {
                 <div className="lg:max-w-lg lg:ml-20">
                     <h2 className="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">{title}</h2>
 
-                    <p className="mt-4 text-sm text-gray-500 dark:text-gray-400 lg:text-base">{extract}</p>
+                    <p className="mt-4 text-sm h-40 overflow-hidden text-gray-500 dark:text-gray-400 lg:text-base">{extract}</p>
 
                     <div className="flex flex-col mt-6 space-y-3 lg:space-y-0 lg:flex-row">
-                        <a href="#" className="block px-5 py-2 text-sm font-medium tracking-wider text-center text-white transition-colors duration-300 transform bg-gray-900 rounded-md hover:bg-gray-700">Watch Now</a>
+                        <a href={`movie/${movie.href}`} className="block px-5 py-2 text-sm font-medium tracking-wider text-center text-white transition-colors duration-300 transform bg-gray-900 rounded-md hover:bg-gray-700">Watch Now</a>
                     </div>
 
                 </div>
