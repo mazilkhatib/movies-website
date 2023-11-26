@@ -88,7 +88,6 @@ export default Index;
 
 interface Movie {
     href?: string;
-    // other movie properties
 }
 
 interface Params {
