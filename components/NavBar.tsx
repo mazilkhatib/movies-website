@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
-// import the icons from the library
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import Image from "next/image";
 
 interface NavbarProps {
   // add any props here if needed
@@ -16,10 +16,12 @@ const Navbar: React.FC<NavbarProps> = () => {
           <div className="lg:flex lg:items-center lg:justify-between">
             <div className="flex items-center justify-between">
               <a href="/">
-                <img
+                <Image
                     className="w-auto h-6 sm:h-7"
                     src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
-                    alt=""
+                    alt="logo"
+                    height={100}
+                    width={100}
                 />
               </a>
 

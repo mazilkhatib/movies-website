@@ -17,7 +17,6 @@ const MovieCard: FC<{movie: Movie}> = ({ movie }) => {
     return (
         movie.thumbnail &&
             <Link href={`movie/${movie.href}`} legacyBehavior>
-
                     <div
                         key={movie.title}
                         className="max-w-xs cursor-pointer overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 transform hover:z-20 hover:scale-125 transition duration-300"
@@ -51,7 +50,6 @@ const MovieCard: FC<{movie: Movie}> = ({ movie }) => {
                             </a>
                         </div>
                     </div>
-
             </Link>
 
 
