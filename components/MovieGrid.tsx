@@ -26,13 +26,13 @@ const MovieGrid: React.FC<MovieGridProps> = ({ movies }) => {
     return (
         <div className="container mx-auto">
             <SearchBar setSearchTerm={setSearchTerm}/>
-            <div className="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-2">
+            <div className="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-2 z-10">
                 {paginatedMovies.map((movie) => (
                     // eslint-disable-next-line react/jsx-key
                     <MovieCard movie={movie} />
                 ))}
             </div>
-            {movies.length > paginatedMovies.length && (
+            { paginatedMovies.length > 10 && (
                 <div className="flex justify-center mt-4">
                     <button
                         onClick={handleLoadMore}
