@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Image from "next/image";
+import Link from "next/link";
 
 interface NavbarProps {
   // add any props here if needed
@@ -50,24 +51,24 @@ const Navbar: React.FC<NavbarProps> = () => {
                 }`}
             >
               <div className="flex flex-col -mx-6 lg:flex-row lg:items-center lg:mx-8 font-bold">
-                <a
+                <Link
                     href="/filter/Drama"
                     className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   Drama
-                </a>
-                <a
+                </Link>
+                <Link
                     href="/filter/Comedy"
                     className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   Comedy
-                </a>
-                <a
+                </Link>
+                <Link
                     href="/filter/Horror"
                     className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   Horror
-                </a>
+                </Link>
               </div>
 
               <div className="flex items-center mt-4 lg:mt-0">
