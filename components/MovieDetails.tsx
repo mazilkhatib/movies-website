@@ -55,15 +55,15 @@ const MovieDetails: FC<PageProps> = ({movie}) => {
                           <span className="text-sm font-semibold text-gray-800 dark:text-white mr-2">
                             Cast:
                           </span>
-                        {movie.cast.map((actor, index) => (
-                            <span
-                                key={index}
-                                className="text-sm text-gray-600 dark:text-gray-300 mr-2"
-                            >
-                                        {actor}
-                                {index < movie.cast.length - 1 && ','}
+                            {movie.cast.map((actor, index) => (
+                                <span
+                                    key={index}
+                                    className="text-sm text-gray-600 dark:text-gray-300 mr-2"
+                                >
+                                         {actor}
+                                        {index < movie.cast.length - 1 && ','}
                                 </span>
-                        ))}
+                            ))}
                     </div>
                     <div className="mt-4 flex flex-wrap items-center mb-10">
                           <span className="text-sm font-semibold text-gray-800 dark:text-white mr-2">

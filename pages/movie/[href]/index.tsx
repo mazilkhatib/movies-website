@@ -36,7 +36,7 @@ const Index: FC<PageProps> = ({movie}) => {
                 <meta property="og:title" content={movie.title} />
                 <meta property="og:description" content={movie.extract} />
                 <meta property="og:image" content={movie.thumbnail} />
-                <meta property="og:url" content={`https://movie-app.com/${href}`} />
+                <meta property="og:url" content={`https://movies-website-theta.vercel.app/movie/${href}`} />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={movie.title} />
                 <meta name="twitter:description" content={movie.extract} />
@@ -59,8 +59,6 @@ interface Params {
     href: string;
 }
 
-
-
 export async function getStaticPaths() {
     const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/movies.json`);
     const data: Movie[] = await response.json();
@@ -77,7 +75,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: {params: Params}) {
     const { href } = params;
-
     const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/movies.json`);
     const data: Movie[] = await response.json();
 

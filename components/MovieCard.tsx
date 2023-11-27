@@ -16,7 +16,7 @@ interface Movie {
 const MovieCard: FC<{movie: Movie}> = ({ movie }) => {
     return (
         movie.thumbnail &&
-            <Link href={`movie/${movie.href}`} legacyBehavior>
+            <Link href={`${process.env.NEXT_PUBLIC_SERVER_URL}/movie/${movie.href}`} legacyBehavior>
                     <div
                         key={movie.title}
                         className="max-w-xs cursor-pointer overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 transform hover:z-20 hover:scale-125 transition duration-300"
@@ -42,7 +42,7 @@ const MovieCard: FC<{movie: Movie}> = ({ movie }) => {
                         <div className="flex items-center justify-between px-4 py-2 bg-gray-900">
                             <h1 className="text-lg font-bold text-white">{movie.year}</h1>
                             <a
-                                href={`movie/${movie.href}`}
+                                href={`${process.env.NEXT_PUBLIC_SERVER_URL}/movie/${movie.href}`}
                                 rel="noreferrer"
                                 className="px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-300 transform bg-white rounded hover:bg-gray-200 focus:bg-gray-400 focus:outline-none"
                             >
