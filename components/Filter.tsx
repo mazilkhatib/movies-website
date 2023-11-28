@@ -20,16 +20,13 @@ interface Props {
 }
 
 function Filter({ onChange }: Props) {
-    // Define a ref to the filter element
     const filterRef = useRef<HTMLDivElement>(null);
 
-    // Define a function to toggle the visibility of the list
     const toggleList = () => {
         const list = document.getElementById("genre-list");
         list?.classList.toggle("hidden");
     };
 
-    // Define a function to hide the list if the click target is outside the filter element
     const handleClickOutside = (event:any) => {
         if (filterRef.current && !filterRef.current.contains(event.target)) {
             const list = document.getElementById("genre-list");
@@ -37,7 +34,6 @@ function Filter({ onChange }: Props) {
         }
     };
 
-    // Use the useEffect hook to add and remove the event listener
     useEffect(() => {
         document.addEventListener("click", handleClickOutside);
         return () => {
@@ -46,7 +42,7 @@ function Filter({ onChange }: Props) {
     }, []);
 
     return (
-        <div className="relative" ref={filterRef}>
+        <div className="relative mr-80 ml-2 lg:ml-52" ref={filterRef}>
             <button
                 className="py-2 px-4 rounded bg-white shadow-lg dark:bg-gray-800"
                 onClick={toggleList}
@@ -54,7 +50,7 @@ function Filter({ onChange }: Props) {
                 <MenuAlt3Icon className="h-6 w-6" />
             </button>
             <ul
-                className="absolute right-0 mt-2 hidden font-bold py-2 w-48 rounded bg-white shadow-lg dark:bg-gray-800"
+                className="absolute mt-2 hidden font-bold py-2 w-48 rounded bg-white shadow-lg dark:bg-gray-800"
                 id="genre-list"
             >
                 {genres.map((genre) => (

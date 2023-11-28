@@ -22,11 +22,13 @@ const Index: FC = () => {
     return (
         <>
             <Navbar/>
-            <div className="absolute right-52 z-50 p-4">
+            <div className="absolute z-20 p-4">
                 <Filter onChange={handleGenreChange} />
             </div>
             <MovieGrid movies={filteredMovies} />
             <Footer/>
+
+
         </>
     );
 };

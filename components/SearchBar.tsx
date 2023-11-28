@@ -12,7 +12,7 @@ const SearchBar: FC<SearchBarProps> = ({ setSearchTerm }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="flex justify-center my-4">
+        <form onSubmit={handleSubmit} className="flex justify-center my-14 z-50">
             <div className="relative mt-4 md:mt-0">
                 <span className="absolute inset-y-0 left-0 flex items-center pl-3">
                   <svg

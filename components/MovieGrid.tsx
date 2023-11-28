@@ -24,7 +24,7 @@ const MovieGrid: React.FC<MovieGridProps> = ({ movies }) => {
     const paginatedMovies = filteredMovies.slice(0, page * itemsPerPage);
 
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto mb-5">
             <SearchBar setSearchTerm={setSearchTerm}/>
             <div className="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-2 z-10">
                 {paginatedMovies.map((movie) => (
