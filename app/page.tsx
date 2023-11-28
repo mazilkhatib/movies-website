@@ -4,7 +4,6 @@ import MovieGrid from "@/components/MovieGrid";
 import moviesData from "@/public/movies.json";
 import Footer from "@/components/Footer";
 
-
 export default function Home() {
     return (
         <>
@@ -15,6 +14,5 @@ export default function Home() {
             </div>
             <Footer/>
         </>
-
     )
 }
