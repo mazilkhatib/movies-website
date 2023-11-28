@@ -32,7 +32,7 @@ const MovieGrid: React.FC<MovieGridProps> = ({ movies }) => {
                     <MovieCard movie={movie} />
                 ))}
             </div>
-            { paginatedMovies.length > 10 && (
+            { (filteredMovies.length > 20 && paginatedMovies.length < filteredMovies.length) && (
                 <div className="flex justify-center mt-4">
                     <button
                         onClick={handleLoadMore}
