@@ -16,7 +16,6 @@ const Footer: React.FC = () => {
                     </div>
                     <div>
                         <p className="font-semibold text-gray-800 dark:text-white">Quick Link</p>
-
                         <div className="flex flex-col items-start mt-5 space-y-2">
                             <a href="#" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Home</a>
                             <a href="#" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Who We Are</a>
@@ -25,7 +24,6 @@ const Footer: React.FC = () => {
                     </div>
                     <div>
                         <p className="font-semibold text-gray-800 dark:text-white">Industries</p>
-
                         <div className="flex flex-col items-start mt-5 space-y-2">
                             <a href="#" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Upcoming Movies</a>
                             <a href="#" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Upcoming Series</a>
